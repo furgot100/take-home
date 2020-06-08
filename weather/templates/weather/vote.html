@@ -1,0 +1,15 @@
+Voting page
+<h1>Welcome!</h1>
+
+<form method="POST" action="{% url 'weather:result' %}">
+    {% csrf_token %}
+    How do you feel today?
+
+    <br>
+    <input type="radio" id="happy" name="mood" value="happy">
+    <label for="happy">Happy</label><br>
+    <input type="radio" id="sad" name="mood" value="sad">
+    <label for="sad">Sad</label><br>
+
+    <input type="submit" value="Submit!">
+</form>
